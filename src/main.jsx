@@ -16,7 +16,7 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        backgroundImage: `url(${props.colorMode === "dark" ? '/images/darkmode.jpg' : '/images/lightmode.jpg'})`,
+        backgroundImage: `url(${props.colorMode === "dark" ? '/darkmode.jpg' : '/lightmode.jpg'})`,
         backgroundSize: "cover",
         transition: "background 0.3s ease-out",
       },
