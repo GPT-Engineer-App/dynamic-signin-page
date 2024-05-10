@@ -105,13 +105,13 @@ const Dashboard = () => {
         </Flex>
       </Flex>
       <Flex justify="space-between" p="1">
-        <Box p="6" bg="gray.200" shadow="md" borderRadius="md" w="32%">
+        <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="40%">
           Card 1
         </Box>
-        <Box p="6" bg="gray.200" shadow="md" borderRadius="md" w="30%">
+        <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="40%">
           Card 2
         </Box>
-        <Box p="6" bg="gray.200" shadow="md" borderRadius="md" w="30%">
+        <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="40%">
           Card 3
         </Box>
       </Flex>
