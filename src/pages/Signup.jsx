@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box } from "@chakra-ui/react";
+import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box, Alert } from "@chakra-ui/react";
 import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon, FaEnvelope } from "react-icons/fa";
 
 const Index = () => {
@@ -22,7 +22,9 @@ const Index = () => {
   const validatePassword = (e) => {
     const value = e.target.value;
     if (value.length < 5) {
-      window.alert("The minimum length is 5");
+      setPasswordError("The minimum length is 5");
+    } else {
+      setPasswordError("");
     }
   };
 
@@ -68,14 +70,10 @@ const Index = () => {
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
               <InputRightElement>
-                {passwordError && (
-                  <Text color="red.500" fontSize="sm">
-                    {passwordError}
-                  </Text>
-                )}
                 <IconButton icon={showPassword ? <FaEyeSlash /> : <FaEye />} onClick={handlePasswordVisibility} variant="ghost" />
               </InputRightElement>
             </InputGroup>
+            {passwordError && <Alert status="error">{passwordError}</Alert>}
           </FormControl>
 
           <FormControl id="confirmPassword" isRequired>
