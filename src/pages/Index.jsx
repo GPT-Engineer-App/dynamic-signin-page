@@ -33,7 +33,9 @@ const Index = () => {
     <Container maxW="container.sm" p={4} centerContent>
       <Box bg={formBackground} p={4} borderRadius="lg" w="80%" m="16px auto">
         <VStack spacing={8} w="100%">
-          <Heading color="#d44242">Sign In</Heading>
+          <Heading color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold">
+            Sign In
+          </Heading>
           <Text>Access your account</Text>
           <FormControl id="username" isRequired>
             <FormLabel>Username</FormLabel>
@@ -68,7 +70,7 @@ const Index = () => {
               </InputRightElement>
             </InputGroup>
           </FormControl>
-          <Button colorScheme="blue" w="80%">
+          <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")}>
             Sign In
           </Button>
           <Text>
