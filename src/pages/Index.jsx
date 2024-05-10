@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box, Alert, AlertIcon, Flex } from "@chakra-ui/react";
+import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box, Alert, AlertIcon } from "@chakra-ui/react";
 import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon, FaEnvelope } from "react-icons/fa";
 
 const Index = () => {
@@ -10,7 +10,6 @@ const Index = () => {
 
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [showHomeContainers, setShowHomeContainers] = useState(true);
 
   const validateUsername = (e) => {
     const value = e.target.value;
@@ -72,19 +71,6 @@ const Index = () => {
             {passwordError && <Alert status="error">{passwordError}</Alert>}
           </FormControl>
 
-          {showHomeContainers && (
-            <Flex direction="row" justify="space-around" w="100%">
-              <Box w="30%" bg="red.200" p="4">
-                Container 1
-              </Box>
-              <Box w="30%" bg="green.200" p="4">
-                Container 2
-              </Box>
-              <Box w="30%" bg="blue.200" p="4">
-                Container 3
-              </Box>
-            </Flex>
-          )}
           <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")} color="white" fontWeight="bold">
             Sign In
           </Button>
