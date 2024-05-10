@@ -16,8 +16,8 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        bg: props.colorMode === "dark" ? "url('/assets/dark_mode_bg.jpg')" : "url('/assets/light_mode_bg.jpg')",
-        backgroundSize: "contain",
+        bg: props.colorMode === "dark" ? "url('https://i.ibb.co/2jT223v/darkmode.jpg')" : "url('https://i.ibb.co/6tb4gCg/lightmode.jpg')",
+        backgroundSize: "cover",
       },
     }),
   },
