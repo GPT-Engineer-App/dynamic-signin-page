@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, IconButton, Spacer, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button, VStack, Text, Link, useColorMode } from "@chakra-ui/react";
 import { useState } from "react";
-import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye } from "react-icons/fa";
+import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye, FaTelegram } from "react-icons/fa";
 
 const FixedSidebar = ({ toggleColorMode, showHomeContainers, setShowHomeContainers }) => {
   const { colorMode } = useColorMode();
@@ -129,10 +129,8 @@ const Dashboard = () => {
         </Box>
       </Flex>
       <Flex as="footer" p="4" bg="gray.800" color="white" justify="space-around" align="center">
-        <IconButton icon={<FaHome />} aria-label="Home" />
         <IconButton icon={<FaPhone />} aria-label="Contact" />
-        <IconButton icon={<FaUser />} aria-label="Profile" />
-        <IconButton icon={<FaCog />} aria-label="Settings" />
+        <IconButton icon={<FaTelegram  />} aria-label="Telegram" />
       </Flex>
     </Box>
   );
