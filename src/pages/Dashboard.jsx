@@ -104,9 +104,9 @@ const Dashboard = () => {
           </Text>
         </Flex>
       </Flex>
-      
+      <p>Hello xforgex</p>
     </Box>
-    <p>Hello xforgex</p>
+    
   );
 };
 
