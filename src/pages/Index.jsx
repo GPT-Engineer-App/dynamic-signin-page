@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, FormHelperText, Box } from "@chakra-ui/react";
+import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box, Alert, AlertIcon } from "@chakra-ui/react";
 import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon } from "react-icons/fa";
 
 const Index = () => {
@@ -62,9 +62,11 @@ const Index = () => {
               </InputGroup>
               <InputRightElement>
                 {passwordError && (
-                  <Text color="red.500" fontSize="sm">
+                  <Alert status="error" fontSize="sm">
+                    <AlertIcon />
                     {passwordError}
-                  </Text>
+                    {passwordError}
+                  </Alert>
                 )}
                 <IconButton icon={showPassword ? <FaEyeSlash /> : <FaEye />} onClick={handlePasswordVisibility} variant="ghost" />
               </InputRightElement>
@@ -74,11 +76,11 @@ const Index = () => {
             Sign In
           </Button>
           <Text>
-  Don't have an account?{" "}
-  <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
-    Sign Up
-  </Link>
-</Text>
+            Don't have an account?{" "}
+            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
+              Sign Up
+            </Link>
+          </Text>
           <Box display="flex" alignItems="center" justifyContent="center" m="16px">
             <FormControl display="flex" alignItems="center">
               <FormLabel htmlFor="dark-mode" mb="0" fontWeight="bold">
