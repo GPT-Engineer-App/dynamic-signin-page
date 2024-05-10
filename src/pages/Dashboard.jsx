@@ -104,7 +104,7 @@ const Dashboard = () => {
           </Text>
         </Flex>
       </Flex>
-      <Flex justify="space-between" p="20">
+      <Flex justify="space-between" p="5">
         <Box p="20" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 1
         </Box>
