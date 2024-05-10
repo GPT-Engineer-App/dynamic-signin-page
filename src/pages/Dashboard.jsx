@@ -128,7 +128,7 @@ const Dashboard = () => {
           Additional Flexbox 2
         </Box>
       </Flex>
-      <Flex as="footer" p="4" bg="gray.800" color="white" justify="space-around" align="center">
+      <Flex as="footer" p="4" bg={colorMode === "light" ? "#cbd5e0" : "gray.800"} color="white" justify="space-around" align="center">
         <IconButton icon={<FaPhone />} aria-label="Contact" />
         <IconButton icon={<FaTelegram />} aria-label="Telegram" />
       </Flex>
