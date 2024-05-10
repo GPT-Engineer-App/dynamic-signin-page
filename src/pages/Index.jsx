@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link as ReactRouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, FormHelperText, Box } from "@chakra-ui/react";
 import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon } from "react-icons/fa";
-import Signup from "Signup.jsx";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
@@ -75,13 +74,12 @@ const Index = () => {
           <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")} color="white" fontWeight="bold">
             Sign In
           </Button>
-<Text>
+          <Text>
   Don't have an account?{" "}
-  <Link as={ReactRouterLink} color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
+  <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
     Sign Up
   </Link>
 </Text>
-
           <Box display="flex" alignItems="center" justifyContent="center" m="16px">
             <FormControl display="flex" alignItems="center">
               <FormLabel htmlFor="dark-mode" mb="0" fontWeight="bold">
