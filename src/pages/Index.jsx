@@ -79,9 +79,9 @@ const Index = () => {
               Sign Up
             </Link>
           </Text>
-          <Box display="flex" alignItems="center" justifyContent="center" bg="#ff0000" m="16px">
+          <Box display="flex" alignItems="center" justifyContent="center" m="16px">
             <FormControl display="flex" alignItems="center">
-              <FormLabel htmlFor="dark-mode" mb="0">
+              <FormLabel htmlFor="dark-mode" mb="0" fontWeight="bold">
                 Dark Mode
               </FormLabel>
               <Switch id="dark-mode" onChange={toggleColorMode} icon={<FaMoon />} />
