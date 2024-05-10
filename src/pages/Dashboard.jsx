@@ -23,7 +23,7 @@ const Dashboard = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="60px">
+    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="60px" overflowY="auto">
       <FixedSidebar toggleColorMode={toggleColorMode} showHomeContainers={showHomeContainers} setShowHomeContainers={setShowHomeContainers} />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
@@ -118,6 +118,14 @@ const Dashboard = () => {
       <Flex justify="center" p="4">
         <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="100%" h="25vh">
           DateRangeCalendar Placeholder
+        </Box>
+      </Flex>
+      <Flex justify="space-around" p="4">
+        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="45%" h="20vh">
+          Additional Flexbox 1
+        </Box>
+        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="45%" h="20vh">
+          Additional Flexbox 2
         </Box>
       </Flex>
     </Box>
