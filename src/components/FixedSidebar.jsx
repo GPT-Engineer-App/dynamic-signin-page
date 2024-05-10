@@ -4,7 +4,7 @@ import { FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks } fr
 const FixedSidebar = () => {
   return (
     <Box position="fixed" left="0" top="0" h="100vh" w="50px" bg="gray.800">
-      <VStack spacing="24px" align="center" justify="center" h="100%">
+      <VStack spacing="24px" align="center" justify="space-between" h="100%">
         <IconButton icon={<FaHome />} aria-label="Home" variant="ghost" color="white" />
         <IconButton icon={<FaShoppingCart />} aria-label="Shop" variant="ghost" color="white" />
         <IconButton icon={<FaWallet />} aria-label="Balance" variant="ghost" color="white" />
