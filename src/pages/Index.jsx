@@ -1,21 +1,47 @@
 import { useState } from "react";
-import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, FormHelperText } from "@chakra-ui/react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, FormHelperText, Box } from "@chakra-ui/react";
+import { FaEye, FaEyeSlash, FaUser, FaLock } from "react-icons/fa";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "gray.700");
+  const formBackground = useColorModeValue("gray.100", "#101010");
   const [showPassword, setShowPassword] = useState(false);
   const handlePasswordVisibility = () => setShowPassword(!showPassword);
 
+  const [usernameError, setUsernameError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+
+  const validateUsername = (e) => {
+    const value = e.target.value;
+    if (value.length < 3) {
+      setUsernameError('The minimum length is 3');
+    } else {
+      setUsernameError('');
+    }
+  };
+
+  const validatePassword = (e) => {
+    const value = e.target.value;
+    if (value.length < 5) {
+      setPasswordError('The minimum length is 5');
+    } else {
+      setPasswordError('');
+    }
+  };
+
   return (
     <Container maxW="container.md" p={4} centerContent>
-      <VStack spacing={8} w="100%">
+      <Box bg={formBackground} p={4} borderRadius="lg" w="100%">
+        <VStack spacing={8} w="100%">
         <Heading>Sign In</Heading>
         <Text>Access your account</Text>
         <FormControl id="username" isRequired>
           <FormLabel>Username</FormLabel>
-          <Input placeholder="Enter your username" />
+          <InputGroup>
+            <Input placeholder="Enter your username" onChange={validateUsername} borderColor={usernameError ? 'red.500' : 'gray.200'} />
+            <InputRightElement children={<FaUser />} />
+          </InputGroup>
+          {usernameError && <Text color="red.500" fontSize="sm">{usernameError}</Text>}
         </FormControl>
         <FormControl id="telegramId" isRequired>
           <FormLabel>Telegram ID</FormLabel>
@@ -24,7 +50,11 @@ const Index = () => {
         <FormControl id="password" isRequired>
           <FormLabel>Password</FormLabel>
           <InputGroup>
-            <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" />
+            <InputGroup>
+              <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePassword} borderColor={passwordError ? 'red.500' : 'gray.200'} />
+              <InputRightElement children={<FaLock />} />
+            </InputGroup>
+            {passwordError && <Text color="red.500" fontSize="sm">{passwordError}</Text>}
             <InputRightElement>
               <IconButton icon={showPassword ? <FaEyeSlash /> : <FaEye />} onClick={handlePasswordVisibility} variant="ghost" />
             </InputRightElement>
@@ -46,6 +76,7 @@ const Index = () => {
           <Switch id="dark-mode" onChange={toggleColorMode} />
         </FormControl>
       </VStack>
+      </Box>
     </Container>
   );
 };
