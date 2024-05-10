@@ -20,7 +20,15 @@ const Index = () => {
     }
   };
 
-  const validatePassword = (e) => {
+  const validatePasswordi = (e) => {
+    const value = e.target.value;
+    if (value.length < 5) {
+      setPasswordError("The minimum length is 5");
+    } else {
+      setPasswordError("");
+    }
+  };
+    const validatePasswordii = (e) => {
     const value = e.target.value;
     if (value.length < 5) {
       setPasswordError("The minimum length is 5");
@@ -65,7 +73,7 @@ const Index = () => {
             <FormLabel>Password</FormLabel>
             <InputGroup>
               <InputGroup>
-                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePassword} borderColor={passwordError ? "red.500" : "gray.200"} />
+                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePasswordi} borderColor={passwordError ? "red.500" : "gray.200"} />
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
               <InputRightElement>
@@ -83,7 +91,7 @@ const Index = () => {
             <FormLabel>Confirm Password</FormLabel>
             <InputGroup>
               <InputGroup>
-                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password again" onChange={validatePassword} borderColor={passwordError ? "red.500" : "gray.200"} />
+                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password again" onChange={validatePasswordii} borderColor={passwordError ? "red.500" : "gray.200"} />
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
               <InputRightElement>
