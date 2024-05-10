@@ -75,7 +75,7 @@ const Index = () => {
           </Button>
           <Text>
             Don't have an account?{" "}
-            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" href="/signup">
+            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
               Sign Up
             </Link>
           </Text>
