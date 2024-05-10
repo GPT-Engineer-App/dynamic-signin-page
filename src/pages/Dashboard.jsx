@@ -105,26 +105,26 @@ const Dashboard = () => {
         </Flex>
       </Flex>
       <Flex justify="space-between" p="5">
-        <Box p="20" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
+        <Box p="20" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 1
         </Box>
-        <Box p="20" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
+        <Box p="20" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 2
         </Box>
-        <Box p="20" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
+        <Box p="20" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 3
         </Box>
       </Flex>
       <Flex justify="center" p="4">
-        <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="99%" h="25vh">
+        <Box p="8" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="99%" h="25vh">
           DateRangeCalendar Placeholder
         </Box>
       </Flex>
       <Flex justify="space-around" p="4">
-        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="49%" h="25vh">
+        <Box p="8" bg={colorMode === "dark" ? "#1a202c" : "gray.300"} shadow="md" borderRadius="md" w="49%" h="25vh">
           Additional Flexbox 1
         </Box>
-        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="49%" h="25vh">
+        <Box p="8" bg={colorMode === "dark" ? "#1a202c" : "gray.300"} shadow="md" borderRadius="md" w="49%" h="25vh">
           Additional Flexbox 2
         </Box>
       </Flex>
