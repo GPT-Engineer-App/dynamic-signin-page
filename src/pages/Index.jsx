@@ -33,33 +33,30 @@ const Index = () => {
     <Container maxW="container.sm" p={4} centerContent>
       <Box bg={useColorModeValue("white", "#4a4a4a")} p={4} borderRadius="lg" w="80%" m="16px auto">
         <VStack spacing={8} w="100%">
-          <Heading color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold">
+          <Heading color={useColorModeValue("black", "white")} fontWeight="bold">
             Sign In
           </Heading>
-          <Text>Access your account</Text>
+          <Text color={useColorModeValue("black", "white")}>Access your account</Text>
 
-          
           <FormControl id="username" isRequired>
             <FormLabel>Username</FormLabel>
-            
+
             <InputGroup>
               <InputGroup borderColor={passwordError ? "red.500" : "gray.200"}>
-              <Input placeholder="Enter your username" onChange={validateUsername} borderColor={usernameError ? "red.500" : "gray.200"} />
-              <InputRightElement children={<FaUser />} />
-            </InputGroup>
-            <InputRightElement>
+                <Input placeholder="Enter your username" onChange={validateUsername} borderColor={usernameError ? "red.500" : "gray.200"} />
+                <InputRightElement children={<FaUser />} />
+              </InputGroup>
+              <InputRightElement>
                 <IconButton icon={<FaUser />} variant="ghost" />
               </InputRightElement>
             </InputGroup>
           </FormControl>
 
-          
           <FormControl id="telegramId" isRequired>
             <FormLabel>Telegram ID</FormLabel>
             <Input placeholder="Enter your Telegram ID" />
           </FormControl>
 
-          
           <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup>
@@ -74,13 +71,12 @@ const Index = () => {
             {passwordError && <Alert status="error">{passwordError}</Alert>}
           </FormControl>
 
-          
           <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")} color="white" fontWeight="bold">
             Sign In
           </Button>
           <Text>
             Don't have an account?{" "}
-            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
+            <Link color={useColorModeValue("black", "white")} fontWeight="bold" to="/signup">
               Sign Up
             </Link>
           </Text>

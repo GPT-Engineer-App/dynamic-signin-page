@@ -60,7 +60,7 @@ const Dashboard = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-      <Flex p="4" color="white" align="center" borderBottom="1px" borderColor="gray.200">
+      <Flex p="4" color={colorMode === "light" ? "black" : "white"} align="center" borderBottom="1px" borderColor="gray.200">
         <IconButton icon={<FaBars />} variant="ghost" aria-label="Open Menu" onClick={onOpen} />
         <Heading size="md" ml="2">
           MyApp
