@@ -4,7 +4,7 @@ import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFil
 const FixedSidebar = () => {
   const { colorMode } = useColorMode();
   return (
-    <VStack position="fixed" left="0" top="0" h="100vh" p="4" spacing="4" bg={colorMode === "light" ? "gray.100" : "gray.900"}>
+    <VStack position="fixed" left="0" top="0" h="100vh" p="4" spacing="48px" bg={colorMode === "light" ? "gray.100" : "gray.900"}>
       <IconButton icon={<FaHome />} aria-label="Home" />
       <IconButton icon={<FaShoppingCart />} aria-label="Shop" />
       <IconButton icon={<FaWallet />} aria-label="Balance" />
