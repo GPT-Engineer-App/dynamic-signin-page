@@ -5,7 +5,7 @@ const Dashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box bg="#020817" minH="100vh">
+    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh">
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -62,9 +62,18 @@ const Dashboard = () => {
           MyApp
         </Heading>
         <Spacer />
-        <IconButton icon={<FaCog />} variant="ghost" aria-label="Settings" />
-        <IconButton icon={<FaPhone />} variant="ghost" aria-label="Contact Me" />
-        <IconButton icon={<FaUser />} variant="ghost" aria-label="Profile" />
+        <Flex align="center">
+          <IconButton icon={<FaCog />} variant="ghost" aria-label="Settings" />
+          <Text ml="2">Settings</Text>
+        </Flex>
+        <Flex align="center">
+          <IconButton icon={<FaPhone />} variant="ghost" aria-label="Contact Me" />
+          <Text ml="2">Contact</Text>
+        </Flex>
+        <Flex align="center">
+          <IconButton icon={<FaUser />} variant="ghost" aria-label="Profile" />
+          <Text ml="2">Profile</Text>
+        </Flex>
       </Flex>
     </Box>
   );
