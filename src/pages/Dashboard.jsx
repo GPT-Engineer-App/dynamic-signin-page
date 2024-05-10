@@ -1,11 +1,12 @@
 import { Box, Flex, Heading, IconButton, Spacer, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button, VStack, Text, Link, useColorMode } from "@chakra-ui/react";
+import { useState } from "react";
 import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye } from "react-icons/fa";
 
-const FixedSidebar = ({ toggleColorMode }) => {
+const FixedSidebar = ({ toggleColorMode, showHomeContainers, setShowHomeContainers }) => {
   const { colorMode } = useColorMode();
   return (
     <VStack position="fixed" left="0" top="0" h="100vh" p="4" spacing="48px" bg={colorMode === "light" ? "gray.100" : "gray.900"}>
-      <IconButton icon={<FaHome />} aria-label="Home" />
+      <IconButton icon={<FaHome />} aria-label="Home" onClick={() => setShowHomeContainers(!showHomeContainers)} />
       <IconButton icon={<FaShoppingCart />} aria-label="Shop" />
       <IconButton icon={<FaWallet />} aria-label="Balance" />
       <IconButton icon={<FaFileAlt />} aria-label="Pages" />
@@ -18,11 +19,12 @@ const FixedSidebar = ({ toggleColorMode }) => {
 
 const Dashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showHomeContainers, setShowHomeContainers] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="50px">
-      <FixedSidebar toggleColorMode={toggleColorMode} />
+      <FixedSidebar toggleColorMode={toggleColorMode} showHomeContainers={showHomeContainers} setShowHomeContainers={setShowHomeContainers} />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -78,6 +80,19 @@ const Dashboard = () => {
         </DrawerContent>
       </Drawer>
       <Flex p="4" color={colorMode === "light" ? "black" : "white"} align="center" borderBottom="1px" borderColor="gray.200">
+        {showHomeContainers && (
+          <Flex direction="row" justify="space-around" w="100%">
+            <Box w="30%" bg="red.200" p="4">
+              Container 1
+            </Box>
+            <Box w="30%" bg="green.200" p="4">
+              Container 2
+            </Box>
+            <Box w="30%" bg="blue.200" p="4">
+              Container 3
+            </Box>
+          </Flex>
+        )}
         <IconButton icon={<FaBars />} variant="ghost" aria-label="Open Menu" onClick={onOpen} />
         <Heading size="md" ml="2">
           MyApp
