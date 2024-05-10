@@ -31,7 +31,7 @@ const Index = () => {
 
   return (
     <Container maxW="container.sm" p={4} centerContent>
-      <Box bg={useColorModeValue("#f4eb9a", "#4a4a4a")} p={4} borderRadius="lg" w="80%" m="16px auto">
+      <Box bg={useColorModeValue("white", "#4a4a4a")} p={4} borderRadius="lg" w="80%" m="16px auto">
         <VStack spacing={8} w="100%">
           <Heading color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold">
             Sign In
