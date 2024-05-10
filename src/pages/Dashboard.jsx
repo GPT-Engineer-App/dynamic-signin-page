@@ -1,12 +1,29 @@
 import { Box, Flex, Heading, IconButton, Spacer, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button, VStack, Text, Link, useColorMode } from "@chakra-ui/react";
 import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye } from "react-icons/fa";
 
+const FixedSidebar = () => {
+  const { colorMode } = useColorMode();
+  return (
+    <VStack position="fixed" left="0" top="0" h="100vh" p="4" spacing="4" bg={colorMode === "light" ? "gray.100" : "gray.900"}>
+      <IconButton icon={<FaHome />} aria-label="Home" />
+      <IconButton icon={<FaShoppingCart />} aria-label="Shop" />
+      <IconButton icon={<FaWallet />} aria-label="Balance" />
+      <IconButton icon={<FaFileAlt />} aria-label="Pages" />
+      <IconButton icon={<FaFolderOpen />} aria-label="Files" />
+      <IconButton icon={<FaTasks />} aria-label="Custom Order" />
+    </VStack>
+  );
+};
+
 const Dashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh">
+    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="50px">
+      {" "}
+      {}
+      <FixedSidebar /> {}
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -17,7 +34,9 @@ const Dashboard = () => {
               <FaEye />
               <Text ml="4">Site Preview</Text>
             </Flex>
-            <VStack align="stretch" mt="2">
+            <VStack align="stretch" mt="2" spacing="6">
+              {" "}
+              {}
               <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaHome />
                 <Link href="#" ml="4">
