@@ -36,7 +36,6 @@ const Index = () => {
           <Heading color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold">
             Create an Account
           </Heading>
-          <Text>Access your account</Text>
           
           <FormControl id="username" isRequired>
             <FormLabel>Username</FormLabel>
