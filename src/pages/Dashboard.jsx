@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, IconButton, Spacer, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button, VStack, Text, Link, useColorMode } from "@chakra-ui/react";
 import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye } from "react-icons/fa";
 
-const FixedSidebar = () => {
+const FixedSidebar = ({ toggleColorMode }) => {
   const { colorMode } = useColorMode();
   return (
     <VStack position="fixed" left="0" top="0" h="100vh" p="4" spacing="48px" bg={colorMode === "light" ? "gray.100" : "gray.900"}>
@@ -11,7 +11,7 @@ const FixedSidebar = () => {
       <IconButton icon={<FaFileAlt />} aria-label="Pages" />
       <IconButton icon={<FaFolderOpen />} aria-label="Files" />
       <IconButton icon={<FaTasks />} aria-label="Custom Order" />
-      <IconButton icon={<FaMoon />} aria-label="Toggle Dark Mode" />
+      <IconButton icon={<FaMoon />} aria-label="Toggle Dark Mode" onClick={toggleColorMode} />
     </VStack>
   );
 };
@@ -22,7 +22,7 @@ const Dashboard = () => {
 
   return (
     <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="50px">
-      <FixedSidebar />
+      <FixedSidebar toggleColorMode={toggleColorMode} />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
