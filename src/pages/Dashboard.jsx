@@ -11,6 +11,7 @@ const FixedSidebar = () => {
       <IconButton icon={<FaFileAlt />} aria-label="Pages" />
       <IconButton icon={<FaFolderOpen />} aria-label="Files" />
       <IconButton icon={<FaTasks />} aria-label="Custom Order" />
+      <IconButton icon={<FaMoon />} aria-label="Toggle Dark Mode" />
     </VStack>
   );
 };
