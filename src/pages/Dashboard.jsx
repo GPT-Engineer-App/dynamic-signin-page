@@ -107,6 +107,9 @@ const Dashboard = () => {
       <Flex justify="space-between" p="1">
         <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 1
+          <Box p="4" bg="gray.100" shadow="sm" borderRadius="md" mt="4">
+            Calendar: {new Date().toLocaleDateString()}
+          </Box>
         </Box>
         <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 2
