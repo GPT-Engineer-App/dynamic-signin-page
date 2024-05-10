@@ -23,7 +23,7 @@ const Dashboard = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="50px">
+    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="60px">
       <FixedSidebar toggleColorMode={toggleColorMode} showHomeContainers={showHomeContainers} setShowHomeContainers={setShowHomeContainers} />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
@@ -104,8 +104,8 @@ const Dashboard = () => {
           </Text>
         </Flex>
       </Flex>
-      <Flex justify="space-between" p="2">
-        <Box p="6" bg="gray.200" shadow="md" borderRadius="md" w="30%">
+      <Flex justify="space-between" p="1">
+        <Box p="6" bg="gray.200" shadow="md" borderRadius="md" w="32%">
           Card 1
         </Box>
         <Box p="6" bg="gray.200" shadow="md" borderRadius="md" w="30%">
