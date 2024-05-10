@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, FormHelperText, Box } from "@chakra-ui/react";
+import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box } from "@chakra-ui/react";
 import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon, FaEnvelope } from "react-icons/fa";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "#101010");
   const [showPassword, setShowPassword] = useState(false);
   const handlePasswordVisibility = () => setShowPassword(!showPassword);
 
@@ -51,10 +50,12 @@ const Index = () => {
             )}
           </FormControl>
 
-          <FormControl id="telegramId" isRequired>
+          <FormControl id="email" isRequired>
             <FormLabel>Email Address</FormLabel>
-            <Input placeholder="name@domain.com" />
-            <InputRightElement children={<FaEnvelope />} />
+            <InputGroup>
+              <Input type="email" placeholder="name@domain.com" />
+              <InputRightElement children={<FaEnvelope />} />
+            </InputGroup>
           </FormControl>
 
           <FormControl id="telegramId" isRequired>
@@ -80,21 +81,13 @@ const Index = () => {
             </InputGroup>
           </FormControl>
 
-          <FormControl id="password" isRequired>
+          <FormControl id="confirmPassword" isRequired>
             <FormLabel>Confirm Password</FormLabel>
             <InputGroup>
               <InputGroup>
-                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password again" onChange={validatePassword} borderColor={passwordError ? "red.500" : "gray.200"} />
+                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password again" borderColor={passwordError ? "red.500" : "gray.200"} />
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
-              <InputRightElement>
-                {passwordError && (
-                  <Text color="red.500" fontSize="sm">
-                    {passwordError}
-                  </Text>
-                )}
-                <IconButton icon={showPassword ? <FaEyeSlash /> : <FaEye />} onClick={handlePasswordVisibility} variant="ghost" />
-              </InputRightElement>
             </InputGroup>
           </FormControl>
 
@@ -102,8 +95,8 @@ const Index = () => {
             Sign Up
           </Button>
           <Text>
-            Alread have an account?{" "}
-            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
+            Already have an account?{" "}
+            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signin">
               Sign In
             </Link>
           </Text>
