@@ -28,7 +28,6 @@ const Index = () => {
     }
   };
 
-
   return (
     <Container maxW="container.sm" p={4} centerContent>
       <Box bg={useColorModeValue("white", "#4a4a4a")} p={4} borderRadius="lg" w="80%" m="16px auto">
@@ -66,8 +65,8 @@ const Index = () => {
           <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup>
-              <InputGroup>
-                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePassword} borderColor={passwordError ? "red.500" : "gray.200"} />
+              <InputGroup borderColor={passwordError ? "red.500" : "gray.200"}>
+                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePassword} />
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
               <InputRightElement>
@@ -84,8 +83,8 @@ const Index = () => {
           <FormControl id="confirmPassword" isRequired>
             <FormLabel>Confirm Password</FormLabel>
             <InputGroup>
-              <InputGroup>
-                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password again" borderColor={passwordError ? "red.500" : "gray.200"} />
+              <InputGroup borderColor={passwordError ? "red.500" : "gray.200"}>
+                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password again" />
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
             </InputGroup>
