@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, IconButton, Spacer, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button, VStack, Text, Link, useColorMode } from "@chakra-ui/react";
+import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye, FaTelegram, FaDollarSign } from "react-icons/fa";
 import { useState } from "react";
-import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye, FaTelegram } from "react-icons/fa";
+
 
 const FixedSidebar = ({ toggleColorMode, showHomeContainers, setShowHomeContainers }) => {
   const { colorMode } = useColorMode();
@@ -105,8 +106,13 @@ const Dashboard = () => {
         </Flex>
       </Flex>
       <Flex direction={{ base: "column", md: "row" }} justify="space-between" p="5" gap="5">
-        <Box p="20" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="33%" h="25vh">
-          Card 1
+        <Box p="20" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="33%" h="25vh" display="flex" alignItems="center" justifyContent="center">
+          <VStack>
+            <IconButton icon={<FaDollarSign />} aria-label="Balance" variant="ghost" isRound />
+            <Text fontSize="xl" fontWeight="bold">
+              $1,234.56
+            </Text>
+          </VStack>
         </Box>
         <Box p="20" bg={colorMode === "dark" ? "#1a202c" : "gray.200"} shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 2
