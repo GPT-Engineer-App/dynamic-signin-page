@@ -23,7 +23,7 @@ const Dashboard = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="60px" overflowY="auto">
+    <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="60px" overflowY="auto" backgroundImage={`url(${colorMode === "dark" ? "/darkmode.jpg" : "/lightmode.jpg"})`} backgroundSize="cover" transition="background 0.3s ease-out">
       <FixedSidebar toggleColorMode={toggleColorMode} showHomeContainers={showHomeContainers} setShowHomeContainers={setShowHomeContainers} />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
@@ -130,7 +130,7 @@ const Dashboard = () => {
       </Flex>
       <Flex as="footer" p="4" bg="gray.800" color="white" justify="space-around" align="center">
         <IconButton icon={<FaPhone />} aria-label="Contact" />
-        <IconButton icon={<FaTelegram  />} aria-label="Telegram" />
+        <IconButton icon={<FaTelegram />} aria-label="Telegram" />
       </Flex>
     </Box>
   );
