@@ -80,19 +80,17 @@ const Dashboard = () => {
         </DrawerContent>
       </Drawer>
       <Flex p="4" color={colorMode === "light" ? "black" : "white"} align="center" borderBottom="1px" borderColor="gray.200">
-        {showHomeContainers && (
-          <Flex direction="row" justify="space-around" w="100%">
-            <Box w="30%" bg="red.200" p="4">
-              Container 1
-            </Box>
-            <Box w="30%" bg="green.200" p="4">
-              Container 2
-            </Box>
-            <Box w="30%" bg="blue.200" p="4">
-              Container 3
-            </Box>
-          </Flex>
-        )}
+        <Flex direction="row" justify="space-around" w="100%" display={showHomeContainers ? "flex" : "none"}>
+          <Box w="30%" bg="red.200" p="4">
+            Container 1
+          </Box>
+          <Box w="30%" bg="green.200" p="4">
+            Container 2
+          </Box>
+          <Box w="30%" bg="blue.200" p="4">
+            Container 3
+          </Box>
+        </Flex>
         <IconButton icon={<FaBars />} variant="ghost" aria-label="Open Menu" onClick={onOpen} />
         <Heading size="md" ml="2">
           MyApp
