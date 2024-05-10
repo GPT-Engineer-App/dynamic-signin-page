@@ -48,7 +48,7 @@ const Index = () => {
               <InputRightElement children={<FaUser />} />
             </InputGroup>
             <InputRightElement>
-                <IconButton icon={setUsernameError variant="ghost" />
+                <IconButton icon={<FaUser />} variant="ghost" />
               </InputRightElement>
             </InputGroup>
           </FormControl>
