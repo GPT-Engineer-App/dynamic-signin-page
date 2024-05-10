@@ -31,7 +31,7 @@ const Index = () => {
 
   return (
     <Container maxW="container.sm" p={4} centerContent>
-      <Box bg={formBackground} p={4} borderRadius="lg" w="80%" m="16px auto">
+      <Box bg={useColorModeValue("gray.100", "#4a4a4a")} p={4} borderRadius="lg" w="80%" m="16px auto">
         <VStack spacing={8} w="100%">
           <Heading color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold">
             Sign In
@@ -70,7 +70,7 @@ const Index = () => {
               </InputRightElement>
             </InputGroup>
           </FormControl>
-          <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")}>
+          <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")} color="white" fontWeight="bold">
             Sign In
           </Button>
           <Text>
