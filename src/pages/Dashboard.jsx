@@ -13,39 +13,39 @@ const Dashboard = () => {
           <DrawerHeader borderBottomWidth="1px">Navigation</DrawerHeader>
           <DrawerBody>
             <VStack align="stretch" mt="2">
-              <Flex align="center" p="2">
+              <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaHome />
-                <Link href="#" ml="2">
+                <Link href="#" ml="4">
                   Home
                 </Link>
               </Flex>
-              <Flex align="center" p="2">
+              <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaShoppingCart />
-                <Link href="#" ml="2">
+                <Link href="#" ml="4">
                   Shop
                 </Link>
               </Flex>
-              <Flex align="center" p="2">
+              <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaWallet />
-                <Link href="#" ml="2">
+                <Link href="#" ml="4">
                   Balance
                 </Link>
               </Flex>
-              <Flex align="center" p="2">
+              <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaFileAlt />
-                <Link href="#" ml="2">
+                <Link href="#" ml="4">
                   Pages
                 </Link>
               </Flex>
-              <Flex align="center" p="2">
+              <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaFolderOpen />
-                <Link href="#" ml="2">
+                <Link href="#" ml="4">
                   Files
                 </Link>
               </Flex>
-              <Flex align="center" p="2">
+              <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaTasks />
-                <Link href="#" ml="2">
+                <Link href="#" ml="4">
                   Custom Order
                 </Link>
               </Flex>
