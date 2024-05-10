@@ -122,9 +122,7 @@ const Dashboard = () => {
             Calendar: {new Date().toLocaleDateString()}
           </Box>
         </Box>
-        <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
-          Card 2
-        </Box>
+
         <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="33%" h="25vh">
           Card 3
         </Box>
