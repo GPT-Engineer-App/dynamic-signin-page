@@ -21,9 +21,7 @@ const Dashboard = () => {
 
   return (
     <Box bg={colorMode === "light" ? "white" : "#020817"} minH="100vh" pl="50px">
-      {" "}
-      {}
-      <FixedSidebar /> {}
+      <FixedSidebar />
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -35,8 +33,6 @@ const Dashboard = () => {
               <Text ml="4">Site Preview</Text>
             </Flex>
             <VStack align="stretch" mt="2" spacing="6">
-              {" "}
-              {}
               <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaHome />
                 <Link href="#" ml="4">
@@ -88,15 +84,15 @@ const Dashboard = () => {
         <Spacer />
         <Flex align="center">
           <IconButton icon={<FaCog />} variant="ghost" aria-label="Settings" />
-          <Text ml="2">Settings</Text>
+          <Text ml="2" mr="2">Settings</Text>
         </Flex>
         <Flex align="center">
           <IconButton icon={<FaPhone />} variant="ghost" aria-label="Contact Me" />
-          <Text ml="2">Contact</Text>
+          <Text ml="2" mr="2">Contact</Text>
         </Flex>
         <Flex align="center">
           <IconButton icon={<FaUser />} variant="ghost" aria-label="Profile" />
-          <Text ml="2">Profile</Text>
+          <Text ml="2" mr="2">Profile</Text>
         </Flex>
       </Flex>
     </Box>
