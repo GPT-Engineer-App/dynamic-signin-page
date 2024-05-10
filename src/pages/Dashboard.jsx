@@ -104,9 +104,18 @@ const Dashboard = () => {
           </Text>
         </Flex>
       </Flex>
-      <p>Hello xforgex</p>
+      <Flex justify="space-around" p="4">
+        <Box p="4" bg="gray.200" shadow="md" borderRadius="md">
+          Card 1
+        </Box>
+        <Box p="4" bg="gray.200" shadow="md" borderRadius="md">
+          Card 2
+        </Box>
+        <Box p="4" bg="gray.200" shadow="md" borderRadius="md">
+          Card 3
+        </Box>
+      </Flex>
     </Box>
-    
   );
 };
 
