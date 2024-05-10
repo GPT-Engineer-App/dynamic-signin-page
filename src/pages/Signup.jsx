@@ -22,9 +22,7 @@ const Index = () => {
   const validatePassword = (e) => {
     const value = e.target.value;
     if (value.length < 5) {
-      setPasswordError("The minimum length is 5");
-    } else {
-      setPasswordError("");
+      window.alert("The minimum length is 5");
     }
   };
 
