@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, FormHelperText, Box } from "@chakra-ui/react";
-import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon, FaEnvelope } from "react-icons/fa";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
@@ -36,7 +36,7 @@ const Index = () => {
           <Heading color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold">
             Create an Account
           </Heading>
-          
+
           <FormControl id="username" isRequired>
             <FormLabel>Username</FormLabel>
             <InputGroup>
@@ -53,14 +53,14 @@ const Index = () => {
           <FormControl id="telegramId" isRequired>
             <FormLabel>Email Address</FormLabel>
             <Input placeholder="name@domain.com" />
+            <InputRightElement children={<FaEnvelope />} />
           </FormControl>
-          
+
           <FormControl id="telegramId" isRequired>
             <FormLabel>Telegram ID</FormLabel>
             <Input placeholder="Enter your Telegram ID" />
           </FormControl>
 
-          
           <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup>
@@ -97,16 +97,15 @@ const Index = () => {
             </InputGroup>
           </FormControl>
 
-          
           <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")} color="white" fontWeight="bold">
             Sign Up
           </Button>
           <Text>
-  Alread have an account?{" "}
-  <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
-    Sign In
-  </Link>
-</Text>
+            Alread have an account?{" "}
+            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
+              Sign In
+            </Link>
+          </Text>
           <Box display="flex" alignItems="center" justifyContent="center" m="16px">
             <FormControl display="flex" alignItems="center">
               <FormLabel htmlFor="dark-mode" mb="0" fontWeight="bold">
