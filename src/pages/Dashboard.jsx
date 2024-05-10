@@ -82,17 +82,23 @@ const Dashboard = () => {
           MyApp
         </Heading>
         <Spacer />
-        <Flex align="center">
+        <Flex align="center" px={{ base: "0", md: "2" }}>
           <IconButton icon={<FaCog />} variant="ghost" aria-label="Settings" />
-          <Text ml="2" mr="2">Settings</Text>
+          <Text ml="2" mr="2" display={{ base: "none", md: "block" }}>
+            Settings
+          </Text>
         </Flex>
-        <Flex align="center">
+        <Flex align="center" px={{ base: "0", md: "2" }}>
           <IconButton icon={<FaPhone />} variant="ghost" aria-label="Contact Me" />
-          <Text ml="2" mr="2">Contact</Text>
+          <Text ml="2" mr="2" display={{ base: "none", md: "block" }}>
+            Contact
+          </Text>
         </Flex>
-        <Flex align="center">
+        <Flex align="center" px={{ base: "0", md: "2" }}>
           <IconButton icon={<FaUser />} variant="ghost" aria-label="Profile" />
-          <Text ml="2" mr="2">Profile</Text>
+          <Text ml="2" mr="2" display={{ base: "none", md: "block" }}>
+            Profile
+          </Text>
         </Flex>
       </Flex>
     </Box>
