@@ -128,6 +128,12 @@ const Dashboard = () => {
           Additional Flexbox 2
         </Box>
       </Flex>
+      <Flex as="footer" p="4" bg="gray.800" color="white" justify="space-around" align="center">
+        <IconButton icon={<FaHome />} aria-label="Home" />
+        <IconButton icon={<FaPhone />} aria-label="Contact" />
+        <IconButton icon={<FaUser />} aria-label="Profile" />
+        <IconButton icon={<FaCog />} aria-label="Settings" />
+      </Flex>
     </Box>
   );
 };
