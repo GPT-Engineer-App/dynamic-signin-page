@@ -115,7 +115,7 @@ const Dashboard = () => {
           Card 3
         </Box>
       </Flex>
-      <Flex visibility="hidden" justify="center" p="4">
+      <Flex justify="center" p="4">
         <Box p="8" bg="gray.200" shadow="md" borderRadius="md" w="100%" h="25vh">
           DateRangeCalendar Placeholder
         </Box>
