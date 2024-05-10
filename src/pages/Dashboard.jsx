@@ -6,13 +6,13 @@ const FixedSidebar = ({ toggleColorMode, showHomeContainers, setShowHomeContaine
   const { colorMode } = useColorMode();
   return (
     <VStack position="fixed" left="0" top="0" h="100vh" p="4" spacing="48px" bg={colorMode === "light" ? "gray.100" : "gray.900"}>
-      <IconButton icon={<FaHome />} aria-label="Home" onClick={() => setShowHomeContainers(!showHomeContainers)} />
-      <IconButton icon={<FaShoppingCart />} aria-label="Shop" />
-      <IconButton icon={<FaWallet />} aria-label="Balance" />
-      <IconButton icon={<FaFileAlt />} aria-label="Pages" />
-      <IconButton icon={<FaFolderOpen />} aria-label="Files" />
-      <IconButton icon={<FaTasks />} aria-label="Custom Order" />
-      <IconButton icon={<FaMoon />} aria-label="Toggle Dark Mode" onClick={toggleColorMode} />
+      <IconButton icon={<FaHome />} aria-label="Home" onClick={() => setShowHomeContainers(!showHomeContainers)} display={{ base: "none", md: "inline-flex" }} />
+      <IconButton icon={<FaShoppingCart />} aria-label="Shop" display={{ base: "none", md: "inline-flex" }} />
+      <IconButton icon={<FaWallet />} aria-label="Balance" display={{ base: "none", md: "inline-flex" }} />
+      <IconButton icon={<FaFileAlt />} aria-label="Pages" display={{ base: "none", md: "inline-flex" }} />
+      <IconButton icon={<FaFolderOpen />} aria-label="Files" display={{ base: "none", md: "inline-flex" }} />
+      <IconButton icon={<FaTasks />} aria-label="Custom Order" display={{ base: "none", md: "inline-flex" }} />
+      <IconButton icon={<FaMoon />} aria-label="Toggle Dark Mode" onClick={toggleColorMode} display={{ base: "none", md: "inline-flex" }} />
     </VStack>
   );
 };
