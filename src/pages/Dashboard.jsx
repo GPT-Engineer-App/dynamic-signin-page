@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, IconButton, Spacer, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Button, VStack, Link, useColorMode } from "@chakra-ui/react";
-import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun } from "react-icons/fa";
+import { FaCog, FaPhone, FaUser, FaBars, FaHome, FaShoppingCart, FaWallet, FaFileAlt, FaFolderOpen, FaTasks, FaMoon, FaSun, FaEye } from "react-icons/fa";
 
 const Dashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -12,6 +12,10 @@ const Dashboard = () => {
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">Navigation</DrawerHeader>
           <DrawerBody>
+            <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
+              <FaEye />
+              <Text ml="4">Site Preview</Text>
+            </Flex>
             <VStack align="stretch" mt="2">
               <Flex align="center" p="2" borderBottom="1px" borderColor="gray.200">
                 <FaHome />
@@ -56,7 +60,7 @@ const Dashboard = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-      <Flex p="4" color="white" align="center">
+      <Flex p="4" color="white" align="center" borderBottom="1px" borderColor="gray.200">
         <IconButton icon={<FaBars />} variant="ghost" aria-label="Open Menu" onClick={onOpen} />
         <Heading size="md" ml="2">
           MyApp
