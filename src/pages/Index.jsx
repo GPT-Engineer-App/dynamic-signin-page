@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, VStack, Input, Button, FormControl, FormLabel, InputGroup, InputRightElement, IconButton, useColorMode, useColorModeValue, Heading, Text, Link, Switch, Box, Alert, AlertIcon } from "@chakra-ui/react";
-import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaUser, FaLock, FaMoon, FaEnvelope } from "react-icons/fa";
 
 const Index = () => {
   const { toggleColorMode } = useColorMode();
@@ -53,25 +53,23 @@ const Index = () => {
             <FormLabel>Telegram ID</FormLabel>
             <Input placeholder="Enter your Telegram ID" />
           </FormControl>
+
+          
           <FormControl id="password" isRequired>
             <FormLabel>Password</FormLabel>
             <InputGroup>
-              <InputGroup>
-                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePassword} borderColor={passwordError ? "red.500" : "gray.200"} />
+              <InputGroup borderColor={passwordError ? "red.500" : "gray.200"}>
+                <Input type={showPassword ? "text" : "password"} placeholder="Enter your password" onChange={validatePassword} />
                 <InputRightElement children={<FaLock />} />
               </InputGroup>
               <InputRightElement>
-                {passwordError && (
-                  <Alert status="error" fontSize="sm">
-                    <AlertIcon />
-                    {passwordError}
-                    {passwordError}
-                  </Alert>
-                )}
                 <IconButton icon={showPassword ? <FaEyeSlash /> : <FaEye />} onClick={handlePasswordVisibility} variant="ghost" />
               </InputRightElement>
             </InputGroup>
+            {passwordError && <Alert status="error">{passwordError}</Alert>}
           </FormControl>
+
+          
           <Button colorScheme="blue" w="80%" bgColor={useColorModeValue("#a5b9b2", "#061c52")} color="white" fontWeight="bold">
             Sign In
           </Button>
