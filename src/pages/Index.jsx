@@ -37,18 +37,23 @@ const Index = () => {
             Sign In
           </Heading>
           <Text>Access your account</Text>
+
+          
           <FormControl id="username" isRequired>
             <FormLabel>Username</FormLabel>
+            
             <InputGroup>
+              <InputGroup borderColor={passwordError ? "red.500" : "gray.200"}>
               <Input placeholder="Enter your username" onChange={validateUsername} borderColor={usernameError ? "red.500" : "gray.200"} />
               <InputRightElement children={<FaUser />} />
             </InputGroup>
-            {usernameError && (
-              <Text color="red.500" fontSize="sm">
-                {usernameError}
-              </Text>
-            )}
+            <InputRightElement>
+                <IconButton icon={setUsernameError variant="ghost" />
+              </InputRightElement>
+            </InputGroup>
           </FormControl>
+
+          
           <FormControl id="telegramId" isRequired>
             <FormLabel>Telegram ID</FormLabel>
             <Input placeholder="Enter your Telegram ID" />
