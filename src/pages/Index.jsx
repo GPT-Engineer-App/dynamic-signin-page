@@ -79,7 +79,7 @@ const Index = () => {
               Sign Up
             </Link>
           </Text>
-          <Box position="absolute" bottom="0" left="0" display="flex" alignItems="center" justifyContent="center" bg="#90cdf4" m="16px">
+          <Box display="flex" alignItems="center" justifyContent="center" bg="#ff0000" m="16px">
             <FormControl display="flex" alignItems="center">
               <FormLabel htmlFor="dark-mode" mb="0">
                 Dark Mode
