@@ -75,11 +75,11 @@ const Index = () => {
             Sign In
           </Button>
           <Text>
-            Don't have an account?{" "}
-            <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
-              Sign Up
-            </Link>
-          </Text>
+  Don't have an account?{" "}
+  <Link color={useColorModeValue("#a5b9b2", "#061c52")} fontWeight="bold" to="/signup">
+    Sign Up
+  </Link>
+</Text>
           <Box display="flex" alignItems="center" justifyContent="center" m="16px">
             <FormControl display="flex" alignItems="center">
               <FormLabel htmlFor="dark-mode" mb="0" fontWeight="bold">
