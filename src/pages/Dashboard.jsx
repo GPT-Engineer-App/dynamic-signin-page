@@ -121,10 +121,10 @@ const Dashboard = () => {
         </Box>
       </Flex>
       <Flex justify="space-around" p="4">
-        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="45%" h="20vh">
+        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="49%" h="25vh">
           Additional Flexbox 1
         </Box>
-        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="45%" h="20vh">
+        <Box p="8" bg="gray.300" shadow="md" borderRadius="md" w="49%" h="25vh">
           Additional Flexbox 2
         </Box>
       </Flex>
